@@ -12,8 +12,8 @@ describe('sts base client should success with ak', function () {
     try {
       new StsBaseClient({
         endpoint: 'sts.aliyuncs.com',
-        accessKey: 'xxxxxx',
-        secretKey: 'xxxxxx'
+        accessKeyId: 'xxxxxx',
+        accessKeySecret: 'xxxxxx'
       });
     } catch (e) {
       error = e.message;
@@ -44,18 +44,18 @@ describe('sts base client should success with ak', function () {
       new StsBaseClient({
         endpoint: 'sts.aliyuncs.com',
         namespace: 'xxxxxx',
-        accessKey: 'xxxxxx',
+        accessKeyId: 'xxxxxx',
       });
     } catch (e) {
       error = e.message;
     }
-    expect(error).to.be('config.secretKey must be passed in');
+    expect(error).to.be('config.accessKeySecret must be passed in');
   });
 
   const client = new StsBaseClient({
     endpoint: 'sts.aliyuncs.com',
-    accessKey: process.env.ACCESS_KEY,
-    secretKey: process.env.SECRET_KEY
+    accessKeyId: process.env.ACCESS_KEY,
+    accessKeySecret: process.env.SECRET_KEY
   });
 
   it('return correct value', function () {
@@ -116,8 +116,8 @@ describe('sts base client should success with sts credential', function () {
         credential: {
           getCredential() {
             return {
-              accessKey: '***',
-              secretKey: '***',
+              accessKeyId: '***',
+              accessKeySecret: '***',
               securityToken: '***'
             };
           }

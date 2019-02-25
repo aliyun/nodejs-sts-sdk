@@ -6,8 +6,8 @@ const StsClient = require('../lib/');
 describe('sts integration test should success', function () {
   const client = new StsClient({
     endpoint: process.env.ENDPOINT,
-    accessKey: process.env.ACCESS_KEY,
-    secretKey: process.env.SECRET_KEY
+    accessKeyId: process.env.ACCESS_KEY,
+    accessKeySecret: process.env.SECRET_KEY
   });
 
   it(`get a temporary identity that plays the role`, async function () {

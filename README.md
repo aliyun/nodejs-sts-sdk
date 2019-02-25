@@ -21,8 +21,8 @@ const StsClient = require('@alicloud/sts-sdk');
 
 const sts = new StsClient({
   endpoint: 'sts.aliyuncs.com', // check this from sts console
-  accessKey: '***************', // check this from aliyun console
-  secretKey: '***************', // check this from aliyun console
+  accessKeyId: '***************', // check this from aliyun console
+  accessKeySecret: '***************', // check this from aliyun console
 });
 
 async function demo() {
