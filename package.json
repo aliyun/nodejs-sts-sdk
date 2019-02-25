@@ -1,0 +1,44 @@
+{
+  "name": "@alicloud/sts-sdk",
+  "version": "1.0.0",
+  "description": "alibaba cloud sts client for node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --fix lib/*.js test/*.js",
+    "test": "mocha -R spec test/*.test.js  --timeout 15000",
+    "cov": "nyc --reporter=html --reporter=text --reporter=lcov mocha -R spec test/*.test.js  --timeout 15000",
+    "ci": "npm run lint && npm run cov && codecov",
+    "clean": "rm -rf coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliyun/nodejs-sts-sdk.git"
+  },
+  "keywords": [
+    "alibaba cloud",
+    "sts",
+    "sdk"
+  ],
+  "author": "Alibaba Cloud SDK",
+  "license": "MIT",
+  "devDependencies": {
+    "muk": "^0.5.3",
+    "codecov": "^3.1.0",
+    "eslint": "^5.10.0",
+    "expect.js": "^0.3.1",
+    "mm": "^2.4.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "rewire": "^4.0.1"
+  },
+  "dependencies": {
+    "@alicloud/http-core-sdk": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/aliyun/nodejs-sts-sdk/issues"
+  },
+  "homepage": "https://github.com/aliyun/nodejs-sts-sdk#readme",
+  "files": [
+    "lib"
+  ]
+}
