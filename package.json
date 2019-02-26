@@ -1,6 +1,6 @@
 {
   "name": "@alicloud/sts-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "alibaba cloud sts client for node.js",
   "main": "lib/index.js",
   "scripts": {
