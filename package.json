@@ -1,6 +1,6 @@
 {
   "name": "@alicloud/sts-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "alibaba cloud sts client for node.js",
   "main": "lib/index.js",
   "scripts": {
@@ -32,7 +32,8 @@
     "rewire": "^4.0.1"
   },
   "dependencies": {
-    "@alicloud/http-core-sdk": "^1.0.0"
+    "@alicloud/http-core-sdk": "^1.0.0",
+    "uuid": "^3.3.2"
   },
   "bugs": {
     "url": "https://github.com/aliyun/nodejs-sts-sdk/issues"
